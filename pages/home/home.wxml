@@ -10,3 +10,10 @@
 <view>当前计数：{{counter}}</view>
 <button size="mini" bindtap='handleBtnClick'>点击增加</button>
 <button size="mini" bindtap='handleSubtraction'>点击减少</button>
+
+<!-- 拿到用户信息 -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handGetUserInfo">获取授权</button>
+
+<!-- 仅仅作为展示用户信息 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
