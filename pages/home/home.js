@@ -2,8 +2,9 @@
 const app = getApp();
 const name = app.globalData.name;
 const age = app.globalData.age;
-console.log(name,age);
+// console.log(name, age);
 
+// 注册一个页面
 Page({
   data: {
     name: "Prm612",
@@ -29,7 +30,8 @@ Page({
         age: 30
       },
     ],
-    counter: 0
+    counter: 0,
+    list: []
   },
   handleBtnClick() {
     // console.log("按钮被点击");
@@ -48,5 +50,43 @@ Page({
   // 获取用户信息
   handGetUserInfo(event) {
     console.log(event)
+  },
+  // 1.监听页面的生命周期函数
+  onLoad() {
+    // console.log("onLoad");
+    wx.request({
+      url: 'http://123.207.32.32:8000/recommend',
+      success: (res) => {
+        // console.log(res);
+        this.setData({
+          list: res.data
+        })
+      }
+    })
+  },
+  onReady(){
+    // console.log("onReady");
+  },
+  onShow() {
+    // console.log("onShow");
+  },
+  onHide(){
+    // console.log("onHide");
+  },
+  onUnload(){
+    // console.log("onUnload");
+  },
+  // 监听其他事件
+  // 监听页面滚动
+  onPageScroll(obj){
+    // console.log(obj);
+  },
+  // 监听页面滚动到底部
+  onReachBottom(){
+    // console.log("页面滚动到底部");
+  },
+  // 监听下拉刷新
+  onPullDownRefresh(){
+    // console.log("下拉刷新的事件");
   }
 })

@@ -17,3 +17,6 @@
 <!-- 仅仅作为展示用户信息 -->
 <open-data type="userNickName"></open-data>
 <open-data type="userAvatarUrl"></open-data>
+
+<!-- 获取接口数据 -->
+<view wx:for="{{list}}" wx:key="">{{item}}</view>
