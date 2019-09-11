@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/button/button",
+    "pages/text/text",
     "pages/home/home",
     "pages/category/category",
     "pages/cart/cart",
@@ -42,5 +44,5 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap45.json"
+  "sitemapLocation": "sitemap.json"
 }
