@@ -1,0 +1,6 @@
+.text1 {
+  font-size: 32px;
+}
+.text2 {
+  font-size: 64rpx;
+}
