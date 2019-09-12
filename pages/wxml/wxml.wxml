@@ -12,3 +12,61 @@
 
 <button size="mini" bindtap="handleSwitchcolor">切换下面字体颜色</button>
 <view class="box {{isActive ? 'active' : ''}}">哈哈哈哈哈</view>
+
+<view>------------------条件判断------------------</view>
+<button size="mini" bindtap="handelSwitchShwo">切换显示</button>
+<view wx:if="{{isShow}}">哈哈哈哈哈哈哈哈</view>
+
+<button size="mini" bindtap="handelIncrement">分数递增6分</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性 -->
+<view hidden>我是hidden属性控制的内容</view>
+<view hidden="{{true}}">我是hidden属性控制的内容</view>
+<!-- wx:if和hidden在隐藏组件时有什么区别 -->
+<!-- 
+区别：
+  hidden：将一个组件隐藏时，该组件依然是存在的
+  wx:if：将一个组件隐藏时，该组件根本不存在(压根没有创建)
+选择：
+  如果显示和隐藏切换的频率非常高，选择使用hidden，反之选择wx:if
+ -->
+<view wx:if="{{false}}">我是wx:if属性控制的内容</view>
+
+
+<view>------------------列表渲染------------------</view>
+<!-- 1.wx:for -->
+<!-- 1.1.遍历数组/字符串/数字 -->
+<!-- <view wx:for="{{['abc','cba','nba']}}" wx:key data-index="{{index}}">{{item}}</view>
+<view wx:for="coderwhy" wx:key>{{item}} {{index}}</view>
+<view wx:for="{{9}}" wx:key>{{item}}</view> -->
+
+<!-- 2.block标签 -->
+<!-- <block wx:if="{{isShow}}">
+  <button size="mini">按钮</button>
+  <view>哈哈哈哈哈哈</view>
+  <text>这是内容</text>
+</block>
+
+<view wx:for="{{3}}">
+  <button size="mini">循环按钮</button>
+  <view>哈哈哈哈哈哈</view>
+  <text>这是内容</text>
+</view> -->
+
+<!-- 3.item，index起名字 -->
+<!-- <view wx:for="{{movies}}" wx:key wx:for-item="movie" wx:for-index="i">{{movie}} {{i}}</view>
+
+<block wx:for="{{nums}}" wx:for-item="innernums">
+  <block wx:for="{{innernums}}">
+    <view>{{item}}</view>
+  </block>
+</block> -->
+
+<!-- 4.wx:key的作用 -->
+<view class="wxkey">
+  <view wx:for="{{letters}}" wx:key="">{{item}}</view>
+</view>
