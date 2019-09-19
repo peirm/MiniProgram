@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    counter: 0
+    counter: 0,
+    isShow: true
   },
   handleIncrement(event){
     console.log(event)
@@ -15,5 +16,24 @@ Page({
   },
   handleTabClick(event){
     console.log(event)
+  },
+  handleIncrementCpn(){
+    // 修改my-select中的counter
+    // 1.获取组件对象
+    let my_select = this.selectComponent('.sel-class')
+    // console.log(my_select)
+
+    // 2.通过setData修改组件中的数据(此方法不推荐/不规范)
+    // my_select.setData({
+    //   counter: my_select.data.counter + 1
+    // })
+    
+    // 3.通过方法对数据进行修改(推荐)
+    my_select.incrementCounter(10)
+  },
+  handleChangeShow(){
+    this.setData({
+      isShow: !this.data.isShow
+    })
   }
 })
