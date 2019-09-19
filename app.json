@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/sjhg/sjhg",    
+    "pages/zdyzj/zdyzj",
+    "pages/sjhg/sjhg",
     "pages/wxs/wxs",
     "pages/wxml/wxml",
     "pages/wxss/wxss",
@@ -15,6 +16,9 @@
     "pages/cart/cart",
     "pages/profile/profile"
   ],
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn"
+  },
   "window": {
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white",

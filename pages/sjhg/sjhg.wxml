@@ -1,4 +1,4 @@
-<!--pages/home/home.wxml-->
+<!-- 事件处理详解 -->
 <!-- 1.事件处理的回顾 -->
 <button bindtap='handleBtnClick' size='mini'>按钮</button>
 <button bind:tap='handleBtnClick' size='mini'>按钮</button>
