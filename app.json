@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/request/request",
     "pages/zdyzj/zdyzj",
     "pages/sjhg/sjhg",
     "pages/wxs/wxs",

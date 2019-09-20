@@ -55,7 +55,7 @@ Page({
   onLoad() {
     // console.log("onLoad");
     wx.request({
-      url: 'http://123.207.32.32:8000/recommend',
+      url: 'http://123.207.32.32:8000/api/v1/recommend',
       success: (res) => {
         // console.log(res);
         this.setData({
