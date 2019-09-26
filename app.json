@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/popup/popup",
     "pages/request/request",
     "pages/zdyzj/zdyzj",
     "pages/sjhg/sjhg",
