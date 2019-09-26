@@ -1,3 +1,6 @@
+<!-- navigator返回(在navigator学习中用到) -->
+<navigator open-type='navigateBack' delta="2">返回到navigator页面</navigator>
+
 <!-- 1.view的基本使用 -->
 <view class="box">哈哈哈哈</view>
 <view>呵呵呵呵</view>

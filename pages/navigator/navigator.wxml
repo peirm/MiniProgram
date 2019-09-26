@@ -1,0 +1,23 @@
+<!--pages/navigator/navigator.wxml-->
+<!-- 1.navigator页面跳转 -->
+<navigator url="/pages/zdyzj/zdyzj">跳到自定义组件页面</navigator>
+
+<!-- 2.navigator属性: open-type -->
+<navigator url="/pages/zdyzj/zdyzj" open-type="redirect">
+  跳到自定义组件页面(redirect,关闭上一个页面)
+</navigator>
+
+<navigator url="/pages/home/home" open-type="switchTab">
+  跳到首页页面(switchTab,跳转到navbar的页面)
+</navigator>
+
+<navigator url="/pages/home/home" open-type="reLaunch">
+  跳到自定义组件页面(reLaunch，关闭所有打开的页面)
+</navigator>
+
+<!-- 3.跳转过程中数据的传递 -->
+<navigator url="/pages/zdyzj/zdyzj?name=prm&age=18&height=1.88">跳到自定义组件页面</navigator>
+<view>{{title}}</view>
+
+<!-- 4.通过代码进行页面跳转 -->
+<button size="mini" bind:tap="handlePushZdyzj">跳到自定义组件页面</button>

@@ -8,6 +8,26 @@ Page({
     counter: 0,
     isShow: true
   },
+  onLoad(options){
+    console.log(options)
+  },
+  onUnload(){
+    // console.log('页面退出')
+    // 1.获取navigator页面的页面对象
+    // getCurrentPages当前所有栈的页面
+    const pages = getCurrentPages();
+    const navigator = pages[pages.length - 2]
+
+    // 2.调用页面对象的setData
+    navigator.setData({
+      title: '呵呵呵呵'
+    })
+  },
+  handleBack(){
+    wx.navigateBack({
+      delta: 1
+    })
+  },
   handleIncrement(event){
     console.log(event)
     this.setData({

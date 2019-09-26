@@ -30,9 +30,9 @@ App({
     
     // 2.判断token是否有值
     if(token && token.length !== 0){// 已经有token，验证token是否过期
-      this.check_token(token);
+      // this.check_token(token);
     } else { // 没有token，进行登陆操作
-      this.login()
+      // this.login()
     }
   },
   check_token(token) {

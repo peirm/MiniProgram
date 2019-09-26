@@ -1,3 +1,8 @@
+<!-- navigator返回(在navigator学习中用到) -->
+<navigator open-type='navigateBack'>返回</navigator>
+<navigator url="/pages/view/view">跳转到视图页</navigator>
+<button size="mini" bind:tap="handleBack">返回</button>
+
 <!-- 自定义组件 -->
 <view class="title">Hello World</view>
 <!-- 1.使用自定义组件 -->
